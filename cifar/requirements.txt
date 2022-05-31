@@ -1,0 +1,3 @@
+torch
+torchvision
+colorama==0.4.4
