@@ -1,6 +1,6 @@
 # TTAC on CIFAR10/100
 
-TTAC on CIFAR-10/100 under common corruptions or natural shifts. Our implementation is based on [repo](https://github.com/vita-epfl/ttt-plus-plus/tree/main/cifar) and therefore requires some similar preparatory work.
+TTAC on CIFAR-10/100 under common corruptions or natural shifts. Our implementation is based on [repo](https://github.com/vita-epfl/ttt-plus-plus/tree/main/cifar) and therefore requires some similar preparation processes.
 
 
 ### Requirements
