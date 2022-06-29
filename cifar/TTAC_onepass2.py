@@ -102,10 +102,6 @@ if args.fix_ssh:
 else:
     optimizer = optim.SGD(ssh.parameters(), lr=args.lr, momentum=0.9)
 
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
-    'min', factor=0.5, patience=10, cooldown=10,
-    threshold=0.0001, threshold_mode='rel', min_lr=0.0001, verbose=True)
-
 criterion = SupConLoss(temperature=args.temperature).cuda()
 # -------------------------------
 
