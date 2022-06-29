@@ -15,6 +15,9 @@ Yongyi Su, Xun Xu, Kui Jia
 
 The code is released in the [cifar](cifar) folder.
 
+### ImageNet-C
+
+The code is coming soon!
 
 ### Citation
 
