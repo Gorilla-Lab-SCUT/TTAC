@@ -17,7 +17,7 @@ The code is released in the [cifar](cifar) folder.
 
 ### ImageNet-C
 
-The code is coming soon!
+The code is released in the [imagenet](imagenet) folder.
 
 ### Citation
 
