@@ -316,5 +316,5 @@ def prepare_train_data(args, num_sample=None):
 
     trloader = torch.utils.data.DataLoader(trset, batch_size=args.batch_size,
                                             shuffle=True, num_workers=args.workers,
-                                            worker_init_fn=seed_worker, pin_memory=pin_memory, drop_last=True)
+                                            worker_init_fn=seed_worker, pin_memory=pin_memory, drop_last=False)
     return trset, trloader
