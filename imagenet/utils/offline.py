@@ -8,7 +8,7 @@ def covariance(features):
     cov = (features.t() @ features - (tmp.t() @ tmp) / n) / n
     return cov
 
-def offline(trloader, ext, num_classes=1000):
+def offline(trloader, ext, classifier, num_classes=1000):
     if os.path.exists('offline.pth'):
         data = torch.load('offline.pth')
         return data
@@ -28,7 +28,7 @@ def offline(trloader, ext, num_classes=1000):
         for batch_idx, (inputs, labels) in enumerate(trloader):
             feat = ext(inputs[0].cuda()) # N, D
             b, d = feat.shape
-            labels = labels.cuda()
+            labels = classifier(feat).argmax(dim=-1)
 
             feat_ext_categories = torch.zeros(num_classes, b, d).cuda()
             feat_ext_categories.scatter_add_(dim=0, index=labels[None, :, None].expand(-1, -1, d), src=feat[None, :, :])

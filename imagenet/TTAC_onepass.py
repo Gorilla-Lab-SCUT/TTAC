@@ -36,8 +36,6 @@ torch.cuda.manual_seed_all(args.seed)
 
 cudnn.benchmark = True
 
-all_err_cls = []
-
 ########### build and load model #################
 net, ext, classifier = build_model()
 
@@ -53,7 +51,7 @@ source_dataloader = create_dataloader(source_dataset, args, True, False)
 target_dataloader_test = create_dataloader(target_dataset_test, args, True, False)
 
 ########### summary offline features #################
-ext_mean, ext_cov, ext_mean_categories, ext_cov_categories = offline(source_dataloader, ext)
+ext_mean, ext_cov, ext_mean_categories, ext_cov_categories = offline(source_dataloader, classifier, ext)
 
 bias = ext_cov.max().item() / 30.
 template_ext_cov = torch.eye(2048).cuda() * bias
@@ -162,7 +160,6 @@ for te_batch_idx, (te_inputs, te_labels) in enumerate(target_dataloader_test):
             with torch.no_grad():
                 ema_ext_mu = ext_mu_categories.detach()
                 ema_ext_cov = ext_sigma_categories.detach()
-            if len(mini_batch_indices) > 2048 and iter_id > args.iters / 2:
                 for label in pseudo_label2.unique():
                     if ema_n[label] > class_ema_length:
                         source_domain = torch.distributions.MultivariateNormal(ext_mean_categories[label, :], torch.diag_embed(ext_cov_categories[label, :]) + template_ext_cov)
