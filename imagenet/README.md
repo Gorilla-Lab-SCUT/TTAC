@@ -69,7 +69,7 @@ We mainly conduct our experiments under the sTTT (N-O) protocol, which is more r
   
     In the sTTT protocol, we employ a sample queue (for all comparing methods), storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
 
-    Therefore, we provide the version of TTAC without queue for more efficiency.
+    Therefore, we provide the version of TTAC without queue which can be utilized in cases where efficiency is important.
 
     ```
     bash scripts/run_ttac_no_without_queue.sh
