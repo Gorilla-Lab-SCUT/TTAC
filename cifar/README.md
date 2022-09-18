@@ -57,7 +57,7 @@ These models are obtained by training on the clean CIFAR10/100 images using semi
 
 - run TTAC on CIFAR10\100-C under the N-O without queue protocol.
     
-    In the sTTT protocol, we employ a sample queue, storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
+    In the sTTT protocol, we employ a sample queue (for all comparing methods), storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
     
     Therefore, we provide the version of TTAC without queue for more efficiency.
 

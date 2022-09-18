@@ -67,7 +67,7 @@ We mainly conduct our experiments under the sTTT (N-O) protocol, which is more r
 
 - run TTAC on ImageNet-C under the N-O without queue protocol.
   
-    In the sTTT protocol, we employ a sample queue, storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
+    In the sTTT protocol, we employ a sample queue (for all comparing methods), storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
 
     Therefore, we provide the version of TTAC without queue for more efficiency.
 
