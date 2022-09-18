@@ -37,78 +37,98 @@ These models are obtained by training on the clean CIFAR10/100 images using semi
 
 ### One Pass Protocols:
 
-- run TTAC on CIFAR10\100-C under the sTTT protocol.
+- run TTAC on CIFAR10\100-C under the sTTT (N-O) protocol.
 
-```
-# CIFAR10-C: 
-bash scripts/run_ttac_cifar10_no.sh
+    ```
+    # CIFAR10-C: 
+    bash scripts/run_ttac_cifar10_no.sh
 
-# CIFAR100-C: 
-bash scripts/run_ttac_cifar100_no.sh
-```
+    # CIFAR100-C: 
+    bash scripts/run_ttac_cifar100_no.sh
+    ```
 
-The following results are yielded by the above scripts (classification errors) under the snow corruption:
+    The following results are yielded by the above scripts (classification errors) under the snow corruption:
 
 
-| Method | CIFAR10-C | CIFAR100-C |
-|:------:|:---------:|:----------:|
-|  Test  |   21.93   |    54.57   |
-|  TTAC  |   10.01   |    37.69   |
+    | Method | CIFAR10-C | CIFAR100-C |
+    |:------:|:---------:|:----------:|
+    |  Test  |   21.93   |    54.57   |
+    |  TTAC  |   10.01   |    37.69   |
 
+- run TTAC on CIFAR10\100-C under the N-O without queue protocol.
+    
+    In the sTTT protocol, we employ a sample queue, storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
+    
+    Therefore, we provide the version of TTAC without queue for more efficiency.
+
+    ```
+    # CIFAR10-C: 
+    bash scripts/run_ttac_cifar10_no_without_queue.sh
+
+    # CIFAR100-C: 
+    bash scripts/run_ttac_cifar100_no_without_queue.sh
+    ```
+
+    The following results are yielded by the above scripts (classification errors) under the snow corruption:
+
+    | Method | CIFAR10-C | CIFAR100-C |
+    |:------:|:---------:|:----------:|
+    |  Test  |   21.93   |    54.57   |
+    |  TTAC  |   11.91    |    40.39   |
 
 
 - run TTAC on CIFAR10\100-C under the Y-O protocol.
 
-```
-# CIFAR10-C: 
-bash scripts/run_ttac_cifar10_yo.sh
+    ```
+    # CIFAR10-C: 
+    bash scripts/run_ttac_cifar10_yo.sh
 
-# CIFAR100-C: 
-bash scripts/run_ttac_cifar100_yo.sh
-```
+    # CIFAR100-C: 
+    bash scripts/run_ttac_cifar100_yo.sh
+    ```
 
-The following results are yielded by the above scripts (classification errors) under the snow corruption:
+    The following results are yielded by the above scripts (classification errors) under the snow corruption:
 
-| Method | CIFAR10-C | CIFAR100-C |
-|:------:|:---------:|:----------:|
-|  Test  |   21.93   |    54.57   |
-|  TTAC  |   9.99    |    34.97   |
+    | Method | CIFAR10-C | CIFAR100-C |
+    |:------:|:---------:|:----------:|
+    |  Test  |   21.93   |    54.57   |
+    |  TTAC  |   9.99    |    34.97   |
 
 ### Multiple Pass Protocols:
 
 - run TTAC on CIFAR10\100-C under the N-M protocol.
 
-```
-# CIFAR10-C: 
-bash scripts/run_ttac_cifar10_nm.sh
+    ```
+    # CIFAR10-C: 
+    bash scripts/run_ttac_cifar10_nm.sh
 
-# CIFAR100-C: 
-bash scripts/run_ttac_cifar100_nm.sh
-```
+    # CIFAR100-C: 
+    bash scripts/run_ttac_cifar100_nm.sh
+    ```
 
-The following results are yielded by the above scripts (classification errors) under the snow corruption:
+    The following results are yielded by the above scripts (classification errors) under the snow corruption:
 
-| Method | CIFAR10-C | CIFAR100-C |
-|:------:|:---------:|:----------:|
-|  Test  |   21.93   |    54.57   |
-|  TTAC  |   8.80    |    34.29   |
+    | Method | CIFAR10-C | CIFAR100-C |
+    |:------:|:---------:|:----------:|
+    |  Test  |   21.93   |    54.57   |
+    |  TTAC  |   8.80    |    34.29   |
 
 - run TTAC on CIFAR10\100-C under the Y-M protocol.
 
-```
-# CIFAR10-C: 
-bash scripts/run_ttac_cifar10_ym.sh
+    ```
+    # CIFAR10-C: 
+    bash scripts/run_ttac_cifar10_ym.sh
 
-# CIFAR100-C: 
-bash scripts/run_ttac_cifar100_ym.sh
-```
+    # CIFAR100-C: 
+    bash scripts/run_ttac_cifar100_ym.sh
+    ```
 
-The following results are yielded by the above scripts (classification errors) under the snow corruption:
+    The following results are yielded by the above scripts (classification errors) under the snow corruption:
 
-| Method | CIFAR10-C | CIFAR100-C |
-|:------:|:---------:|:----------:|
-|  Test  |   21.93   |    54.57   |
-|  TTAC  |   8.00    |    30.48   |
+    | Method | CIFAR10-C | CIFAR100-C |
+    |:------:|:---------:|:----------:|
+    |  Test  |   21.93   |    54.57   |
+    |  TTAC  |   8.00    |    30.48   |
 
 
 ### Descriptions

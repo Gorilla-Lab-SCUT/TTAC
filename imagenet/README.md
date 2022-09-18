@@ -50,9 +50,9 @@ Here, we use the pretrain model provided by torchvision.
 
 ### Results
 
-We mainly conduct our experiments under the sTTT(N-O) protocol, which is more realistic and challenging.
+We mainly conduct our experiments under the sTTT (N-O) protocol, which is more realistic and challenging.
 
-- run TTAC on ImageNet-C under the sTTT protocol.
+- run TTAC on ImageNet-C under the sTTT (N-O) protocol.
   
     ```
     bash scripts/run_ttac_no.sh
@@ -64,3 +64,20 @@ We mainly conduct our experiments under the sTTT(N-O) protocol, which is more re
     |:------:|:----------:|
     |  Test  |   82.22    |
     |  TTAC  |   44.56     |
+
+- run TTAC on ImageNet-C under the N-O without queue protocol.
+  
+    In the sTTT protocol, we employ a sample queue, storing past samples, to aid model adaptation to enhance stability and improve accuracy. Obviously, it would bring more computing cost. 
+
+    Therefore, we provide the version of TTAC without queue for more efficiency.
+
+    ```
+    bash scripts/run_ttac_no_without_queue.sh
+    ```
+
+    The following results are yielded by the above script (classification errors) under the snow corruption:
+
+    | Method | ImageNet-C (Level 5) |
+    |:------:|:----------:|
+    |  Test  |   82.22    |
+    |  TTAC  |   46.64     |
