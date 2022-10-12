@@ -8,7 +8,6 @@ This repository is an official implementation for our NeurIPS 2022 paper [\[Arxi
 <br>
 <sup>1</sup>South China University of Technology &nbsp; <sup>2</sup>Institute for Infocomm Research &nbsp; <sup>3</sup>Peng Cheng Laboratory
 <br>
-<sup>*</sup>Equal contribution &nbsp; <sup>&#8224;</sup>Correspondence to <kuijia@scut.edu.cn> & <alex.xun.xu@gmail.com>
 
 
 ### Overview
