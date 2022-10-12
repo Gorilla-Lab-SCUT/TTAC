@@ -170,12 +170,11 @@ for epoch in range(1, args.nepoch+1):
     tic = time.time()
 
     if args.fix_ssh:
-        classifier.eval()
         head.eval()
     else:
-        classifier.train()
         head.train()
     ext.train()
+    classifier.eval()
 
     sample_predict_alpha = torch.where(sample_predict_alpha < 1, sample_predict_alpha + 0.2, torch.ones_like(sample_predict_alpha))
 

@@ -187,12 +187,11 @@ for te_batch_idx, (te_inputs, te_labels) in enumerate(teloader):
         tr_extra_dataloader_iter = iter(tr_extra_dataloader)
 
     if args.fix_ssh:
-        classifier.eval()
         head.eval()
     else:
-        classifier.train()
         head.train()
     ext.train()
+    classifier.eval()
 
     for iter_id in range(min(args.iters, int(len(mini_batch_indices) / 256) + 1) + 1):
         if iter_id > 0:

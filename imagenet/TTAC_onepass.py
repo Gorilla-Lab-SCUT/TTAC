@@ -51,7 +51,7 @@ source_dataloader = create_dataloader(source_dataset, args, True, False)
 target_dataloader_test = create_dataloader(target_dataset_test, args, True, False)
 
 ########### summary offline features #################
-ext_mean, ext_cov, ext_mean_categories, ext_cov_categories = offline(source_dataloader, classifier, ext)
+ext_mean, ext_cov, ext_mean_categories, ext_cov_categories = offline(source_dataloader, ext, classifier)
 
 bias = ext_cov.max().item() / 30.
 template_ext_cov = torch.eye(2048).cuda() * bias

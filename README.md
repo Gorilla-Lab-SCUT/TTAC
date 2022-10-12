@@ -1,10 +1,15 @@
 # TTAC
 
-This is an official implementation for the paper
+This repository is an official implementation for our NeurIPS 2022 paper [\[Arxiv\]](https://arxiv.org/abs/2206.02721).
 
-**[Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering](https://arxiv.org/abs/2206.02721)**
+## Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering
+
+Yongyi Su$^{1*}$, Xun Xu$^{21*}$, Kui Jia$^{13\dag}$
 <br>
-Yongyi Su, Xun Xu, Kui Jia
+$^1$South China University of Technology &nbsp; $^2$Institute for Infocomm Research &nbsp; $^3$Peng Cheng Laboratory
+<br>
+$^*$ Equal contribution; $^\dag$ Correspondence.
+
 
 ### Overview
 
@@ -24,10 +29,11 @@ The code is released in the [imagenet](imagenet) folder.
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-@misc{2206.02721,
-  title = {Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering},
-  author = {Su, Yongyi and Xu, Xun and Jia, Kui},
-  publisher = {arXiv},
-  year = {2022}
+@inproceedings{
+  su2022revisiting,
+  title={Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering},
+  author={Yongyi Su and Xun Xu and Kui Jia},
+  booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},
+  year={2022}
 }
 ```
