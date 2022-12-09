@@ -160,11 +160,13 @@ for te_batch_idx, (te_inputs, te_labels) in enumerate(target_dataloader_test):
             with torch.no_grad():
                 ema_ext_mu = ext_mu_categories.detach()
                 ema_ext_cov = ext_sigma_categories.detach()
+            
+            if iter_id > int(args.iters / 2):
                 for label in pseudo_label2.unique():
                     if ema_n[label] > class_ema_length:
                         source_domain = torch.distributions.MultivariateNormal(ext_mean_categories[label, :], torch.diag_embed(ext_cov_categories[label, :]) + template_ext_cov)
                         target_domain = torch.distributions.MultivariateNormal(ext_mu_categories[label, :], torch.diag_embed(ext_sigma_categories[label, :]) + template_ext_cov)
-                        loss += (torch.distributions.kl_divergence(source_domain, target_domain) + torch.distributions.kl_divergence(target_domain, source_domain)) * loss_scale / (ema_n > class_ema_length).sum()
+                        loss += (torch.distributions.kl_divergence(source_domain, target_domain) + torch.distributions.kl_divergence(target_domain, source_domain)) * loss_scale / class_num
             
             # Gaussian Distribution Alignment
             b = feat_ext.shape[0]
