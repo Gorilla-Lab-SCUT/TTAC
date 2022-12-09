@@ -1,14 +1,13 @@
 # TTAC
 
-This repository is an official implementation for our NeurIPS 2022 paper [\[Arxiv\]](https://arxiv.org/abs/2206.02721).
+This repository is an official implementation for our NeurIPS 2022 paper [\[Arxiv\]](https://arxiv.org/abs/2206.02721) [\[Openreview\]](https://openreview.net/forum?id=W-_4hgRkwb).
 
 ## Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering
 
-**Yongyi Su<sup>1\*</sup>** &nbsp; **Xun Xu<sup>21\*</sup>** &nbsp; **Kui Jia<sup>13&#8224;</sup>**
+**Yongyi Su<sup>1</sup>** &nbsp; **Xun Xu<sup>21</sup>** &nbsp; **Kui Jia<sup>13</sup>**
 <br>
 <sup>1</sup>South China University of Technology &nbsp; <sup>2</sup>Institute for Infocomm Research &nbsp; <sup>3</sup>Peng Cheng Laboratory
 <br>
-<sup>*</sup>Equal contribution &nbsp; <sup>&#8224;</sup>Correspondence
 
 
 ### Overview
