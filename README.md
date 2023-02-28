@@ -32,7 +32,9 @@ If you find our work useful in your research, please consider citing:
   su2022revisiting,
   title={Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering},
   author={Yongyi Su and Xun Xu and Kui Jia},
-  booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},
-  year={2022}
+  booktitle={Advances in Neural Information Processing Systems},
+  editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+  year={2022},
+  url={https://openreview.net/forum?id=W-_4hgRkwb}
 }
 ```
